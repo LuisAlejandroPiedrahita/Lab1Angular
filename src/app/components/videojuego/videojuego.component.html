@@ -1,0 +1,16 @@
+<div class="row animated fadeIn fast">
+  <div class="col-md-4">
+    <img [src]="videojuego.img" class="img-fluid" [alt]="videojuego.nombre">
+    <br><br>
+    <a [routerLink]="['/videojuegos']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+  <div class="col-md-8">
+    <h3>{{ videojuego.nombre }}</h3>
+    <hr>
+    <p>
+      {{ videojuego.descripcion }}
+    </p>
+    <img *ngIf="videojuego.consola == 'PS4'" class="logo" src="../../../assets/img/ps4/ps4.png" alt="">
+    <img height="180" width="480" *ngIf="videojuego.consola == 'Xbox'" class="logo" src="../../../assets/img/xbox/xbox.png" alt="">
+  </div>
+</div>
